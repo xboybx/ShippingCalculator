@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping calculator</title>
+    <style>
+        body {
+            background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .infoholder {
+            height: 250px;
+            width: 250px;
+
+        }
+
+        .GLASSMORP {
+
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.13);
+
+        }
+
+
+        button {
+            background-color: rgb(219, 174, 69);
+            border: none;
+            padding-top: 5px;
+            padding-right: 8px;
+            padding-bottom: 5px;
+            padding-left: 8px;
+            border-radius: 3px;
+            font-weight: 520;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .input-size {
+            height: 21px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="GLASSMORP">
+        <div class="infoholder">
+            <b>
+                <P>This is a Shipping Charge's Calculator</P>
+            </b>
+
+            <input placeholder="Enter the cost" class="js-input-cost input-size" onkeydown="keyboard_evnt()"></input>
+
+            <button>Calculate</button>
+
+            <p class="result"></p>
+        </div>
+    </div>
+
+
+    <script>
+
+
+
+
+    // program of adding evevtnlistener to the calculate button   
+        calc();
+function calc(){
+    let btn = document.querySelector("button");
+      
+      btn.addEventListener("click", () => {
+
+      const input_cost_Element = document.querySelector('.js-input-cost');
+
+
+      let cost_Entered = Number(input_cost_Element.value);
+
+
+      if (cost_Entered > 500) {
+
+          cost_Entered = cost_Entered + 10;
+
+      }
+
+      document.querySelector(".result").
+          innerHTML = `Total Cost: $${cost_Entered}`;
+  });
+}
+
+    // program function of the calculate button   
+  function calcus() {
+            const input_cost_Element = document.querySelector('.js-input-cost');
+
+
+            let cost_Entered = Number(input_cost_Element.value);
+
+
+            if (cost_Entered > 500) {
+
+                cost_Entered = cost_Entered + 10;
+
+            }
+
+            document.querySelector(".result").
+                innerHTML = `Total Cost: $${cost_Entered}`;
+
+        }
+
+
+        function keyboard_evnt() {
+            const evntlstn = event.key;
+            if (evntlstn === 'Enter') {
+                calcus();
+            }
+        }
+
+    //   here im not able to add event listener to the onkeypress enter  i have update it
+
+
+
+        // function keyboard_evnt() {
+        //     const evntlstn = event.key;
+        //     if (evntlstn === 'Enter') {
+        //         calculator();
+        //     }
+        // }
+
+    </script>
+</body>
+
+</html>
