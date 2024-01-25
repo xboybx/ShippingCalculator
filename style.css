@@ -1,0 +1,44 @@
+body {
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.infoholder {
+    height: 250px;
+    width: 250px;
+
+}
+
+.GLASSMORP {
+
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.13);
+
+}
+
+
+button {
+    background-color: rgb(219, 174, 69);
+    border: none;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    border-radius: 3px;
+    font-weight: 520;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.input-size {
+    height: 21px;
+}
